@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  filestore:
+    image: emberstack/sftp:latest
+    ports:
+      - "5010:22"
+    volumes:
+      - "./Filestore/sftp.json:/app/config/sftp.json:ro"
+      - "./Filestore/Files/:/home/demo/sftp"
